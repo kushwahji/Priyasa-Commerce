@@ -1,0 +1,20 @@
+{
+  "name": "PriyasaCore",
+  "alias": "priyasacore",
+  "description": "Unified PRIYASA commerce core: authentication/OTP, device lifecycle, customer identity, catalog, cart, checkout, orders, inventory, payments and integration contracts.",
+  "keywords": [
+    "ecommerce",
+    "catalog",
+    "cart",
+    "checkout",
+    "orders",
+    "inventory",
+    "payments"
+  ],
+  "priority": 10,
+  "providers": [
+    "Modules\\PriyasaCore\\Providers\\PriyasaCoreServiceProvider"
+  ],
+  "files": [],
+  "version": "1.2.0"
+}

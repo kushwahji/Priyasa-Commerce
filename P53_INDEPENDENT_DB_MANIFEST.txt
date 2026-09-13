@@ -1,0 +1,19 @@
+PRIYASA P53 — INDEPENDENT COMMERCE DATABASE
+
+Architecture:
+  Store/Admin -> API /api/v1 -> PriyasaCore -> DB connection: priyasa
+
+Changes:
+  - PriyasaModel base class for all module Eloquent models.
+  - Module query builder, schema builder and transactions routed to priyasa.
+  - Dedicated DB configuration via PRIYASA_DB_* environment variables.
+  - Explicit priyasa:migrate lifecycle using --database=priyasa.
+  - priyasa:db-health verification command.
+  - P0 identity migration keeps users on default DB and commerce customers on priyasa.
+  - Removed cross-database users foreign-key assumptions from RBAC migrations.
+  - Operations/admin security retain explicit default DB access for users/failed_jobs.
+  - Migration auto-loading removed from the provider to prevent accidental mixed migration repositories.
+
+Important:
+  This is an architecture/data-boundary release, not a new commerce feature release.
+  Existing production data must be migrated/copied into the dedicated database with a verified backup and a controlled cutover.

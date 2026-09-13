@@ -1,0 +1,31 @@
+{
+  "name": "priyasa/core",
+  "description": "PRIYASA commerce core Laravel module",
+  "type": "library",
+  "require": {
+    "php": ">=8.2",
+    "laravel/framework": "^11.0|^12.0",
+    "laravel/sanctum": "^4.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Modules\\PriyasaCore\\": "./"
+    }
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Modules\\PriyasaCore\\Providers\\PriyasaCoreServiceProvider"
+      ]
+    }
+  },
+  "require-dev": {
+    "orchestra/testbench": "^10.0|^11.0",
+    "pestphp/pest": "^3.0|^4.0"
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Modules\\PriyasaCore\\Tests\\": "Tests/"
+    }
+  }
+}

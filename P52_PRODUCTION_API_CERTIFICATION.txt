@@ -1,0 +1,13 @@
+P52 — Production API Certification & E2E Consolidation
+
+Purpose: certify the cumulative P0-P51 Storefront + Admin API surface instead of adding another isolated feature.
+
+Includes:
+- unique cumulative migration timestamps
+- static API certification scanner
+- runtime Laravel E2E feature tests
+- guarded disposable-database E2E runner
+- OpenAPI/runtime route inventory support
+- production certification documentation
+
+Important: external payment/courier/provider tests require the host application's sandbox credentials and real test fixtures. This patch never fabricates provider success.
